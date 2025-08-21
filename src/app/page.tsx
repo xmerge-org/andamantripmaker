@@ -22,6 +22,9 @@ const HomePage = () => {
         <p className="text-center text-gray-500 text-lg md:text-xl lg:text-2xl mb-8">
           We&apos;re working hard to improve the user experience. Stay tuned!
         </p>
+        <p className="text-center text-gray-500 text-lg md:text-md lg:text-lg mb-8">
+          For any inquiries please contact info@andamantripmaker.in
+        </p>
       </div>
     </div>
   );
