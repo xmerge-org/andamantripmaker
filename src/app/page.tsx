@@ -4,6 +4,7 @@ import Header from "../components/generic/Header";
 import HeroSection from "../components/generic/HeroSection";
 import TravelPackages from "../components/generic/TravelPackages";
 import ContactUs from "@/components/generic/ContactUs";
+import GoogleReviews from "@/components/generic/GoogleReviews";
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <TravelPackages />
+      <GoogleReviews />
       <ContactUs />
       <Footer />
     </div>

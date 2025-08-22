@@ -161,3 +161,7 @@ a {
     transform: translateX(-50%);
   }
 }
+
+a[href*="elfsight.com"][target="_blank"] {
+  display: none !important;
+}
