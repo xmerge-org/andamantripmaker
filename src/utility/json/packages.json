@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "title": "Romantic Honeymoon Escape on Havelock's Secluded Shores",
+    "location": "Havelock Island, Andaman",
+    "duration": "5 Days",
+    "people": "2 People",
+    "price": "₹39,999",
+    "originalPrice": "₹49,999",
+    "discountPercent": 20,
+    "rating": 4.9,
+    "amenities": [
+      "Private Beachside Cottage",
+      "Candlelit Gourmet Dinner for Two",
+      "Couples' Signature Spa & Massage",
+      "Daily Breakfast & Sunset Snacks"
+    ],
+    "availableDates": ["2025-09-10", "2025-10-05", "2025-11-01"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Andaman-Nicobar-Honeymoon-Package.png",
+    "link": "/packages/andaman-honeymoon-escape",
+    "description": "Spend five unforgettable days in a secluded beachfront cottage on Havelock Island. Wake up to the sound of waves, indulge in a pampering spa treatment for two overlooking turquoise waters, and savor a private, candlelit dinner beneath a canopy of stars. This is the ultimate romantic hideaway for newlyweds."
+  },
+  {
+    "id": 2,
+    "title": "High-Octane Adventure Odyssey Across Neil & Havelock",
+    "location": "Neil Island & Havelock, Andaman",
+    "duration": "4 Days",
+    "people": "1-4 People",
+    "price": "₹29,999",
+    "originalPrice": "₹34,999",
+    "discountPercent": 14,
+    "rating": 4.7,
+    "amenities": [
+      "Introductory Scuba Dive Session",
+      "Guided Kayak & Snorkel Safari",
+      "Rainforest Trek with Waterfall Swim",
+      "All Meals & Transfers Included"
+    ],
+    "availableDates": ["2025-09-15", "2025-10-20", "2025-12-05"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Andaman-Adventure-Packages.png",
+    "link": "/packages/andaman-adventure-seeker",
+    "description": "Charge through four days of adrenaline-pumping fun on Neil and Havelock Islands. Dive into crystal reefs, paddle along hidden coves by kayak, trek through lush rainforests to secret waterfalls, and feast on island-fresh cuisine. Perfect for thrill-seekers and nature lovers alike."
+  },
+  {
+    "id": 3,
+    "title": "All-Inclusive Family Fun & Discovery in Port Blair & Baratang",
+    "location": "Port Blair & Baratang, Andaman",
+    "duration": "6 Days",
+    "people": "2-5 People",
+    "price": "₹44,999",
+    "originalPrice": "₹54,999",
+    "discountPercent": 18,
+    "rating": 4.6,
+    "amenities": [
+      "Inter-Island Ferry Transfers",
+      "Guided Limestone Caves Tour",
+      "Bird Island Sunset Cruise",
+      "Buffet Breakfast & Lunch Daily"
+    ],
+    "availableDates": ["2025-09-20", "2025-11-10", "2025-12-20"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Family-Special-Andaman.png",
+    "link": "/packages/andaman-family-fun",
+    "description": "Create lifelong memories on this six-day family adventure in Port Blair and Baratang. Explore mysterious limestone caves, watch rare birdlife on a sunset cruise, discover mangrove creeks by boat, and top each day with a lavish buffet feast that everyone will love."
+  },
+  {
+    "id": 4,
+    "title": "Deep-Sea Underwater Explorer: PADI Certification & Coral Safari",
+    "location": "Havelock & Neil Island, Andaman",
+    "duration": "5 Days",
+    "people": "1-3 People",
+    "price": "₹49,999",
+    "originalPrice": "₹59,999",
+    "discountPercent": 17,
+    "rating": 4.8,
+    "amenities": [
+      "Certified Open Water Diver Course (PADI)",
+      "Guided Snorkeling Safari in Marine Park",
+      "Speedboat Transfers",
+      "Full Dive Gear Rental"
+    ],
+    "availableDates": ["2025-10-01", "2025-10-25", "2025-11-15"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Deep-Sea-Underwater-Explorer-Andaman.png",
+    "link": "/packages/andaman-underwater-explorer",
+    "description": "Immerse yourself in Andaman's vibrant underwater world with a full PADI Open Water certification. Spend five days mastering dive skills, snorkeling among coral gardens teeming with tropical fish, and cruising between islands in a high-speed boat. A bucket-list experience for marine enthusiasts."
+  },
+  {
+    "id": 5,
+    "title": "Intimate Romantic Sunset & Luxury Cruise Experience",
+    "location": "Port Blair, Andaman",
+    "duration": "2 Days",
+    "people": "2 People",
+    "price": "₹14,999",
+    "originalPrice": "₹17,999",
+    "discountPercent": 16,
+    "rating": 4.5,
+    "amenities": [
+      "Evening Sunset Catamaran Cruise",
+      "Champagne & Gourmet Canapés",
+      "Live Acoustic Music on Deck",
+      "Overnight Boutique Stay"
+    ],
+    "availableDates": ["2025-09-30", "2025-10-18", "2025-11-12"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Luxury-Cruise-Experience-Andaman.png",
+    "link": "/packages/andaman-sunset-cruise",
+    "description": "Drift along Port Blair's glittering horizon at sunset aboard an elegant catamaran. Sip chilled champagne, nibble on gourmet canapés, and sway to live acoustic tunes as the sky ignites in gold and crimson—then retreat to a boutique seaside suite for a night of pure luxury."
+  },
+  {
+    "id": 6,
+    "title": "Epic Island-Hopping & Star-Lit Camping Adventure",
+    "location": "Ross, Neil & Havelock, Andaman",
+    "duration": "7 Days",
+    "people": "1-4 People",
+    "price": "₹54,999",
+    "originalPrice": "₹64,999",
+    "discountPercent": 15,
+    "rating": 4.7,
+    "amenities": [
+      "Inter-Island Ferry Pass",
+      "Beachside Guided Tours",
+      "Overnight Star-Lit Camping",
+      "All Meals & Snacks"
+    ],
+    "availableDates": ["2025-10-05", "2025-11-20", "2025-12-15"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/beach-camping-at-kalapathar-beach-andaman.png",
+    "link": "/packages/andaman-island-hopper",
+    "description": "Spend a week weaving through Ross, Neil, and Havelock Islands on this epic island-hopping journey. Discover hidden beaches, snorkel in secret bays, and spend two nights camping under the unpolluted Andaman sky, complete with campfire storytelling and grilled seafood."
+  },
+  {
+    "id": 7,
+    "title": "Holistic Wellness Retreat Amid Baratang's Lush Forests",
+    "location": "Baratang & Long Island, Andaman",
+    "duration": "5 Days",
+    "people": "1-2 People",
+    "price": "₹34,999",
+    "originalPrice": "₹41,999",
+    "discountPercent": 17,
+    "rating": 4.8,
+    "amenities": [
+      "Daily Yoga & Sunrise Meditation",
+      "Traditional Ayurvedic Massages",
+      "Organic Farm-To-Table Meals",
+      "Guided Forest Therapy Walks"
+    ],
+    "availableDates": ["2025-09-25", "2025-10-30", "2025-11-25"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Baratang-Andaman.png",
+    "link": "/packages/andaman-wellness-retreat",
+    "description": "Rebalance body and soul in a five-day wellness retreat nestled in Baratang’s verdant mangroves. Flow through sunrise yoga sessions, receive healing Ayurvedic therapies, feast on organic meals sourced from local gardens, and wander guided forest trails for a true mind-body reset."
+  },
+  {
+    "id": 8,
+    "title": "Budget-Friendly Explorer: Port Blair & Ross Highlights",
+    "location": "Port Blair & Ross Island, Andaman",
+    "duration": "3 Days",
+    "people": "1-3 People",
+    "price": "₹19,999",
+    "originalPrice": "₹24,999",
+    "discountPercent": 20,
+    "rating": 4.4,
+    "amenities": [
+      "Shared Dorm-Style Accommodation",
+      "Guided City & Island Ferry Tours",
+      "Daily Continental Breakfast",
+      "All Transfers Included"
+    ],
+    "availableDates": ["2025-09-18", "2025-10-12", "2025-11-08"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Ross-Island-Andaman.png",
+    "link": "/packages/andaman-budget-explorer",
+    "description": "Maximize fun on a wallet-friendly three-day trip to Port Blair and Ross Island. Stay in clean, shared dorms, cruise past colonial ruins, visit historic cell houses, and finish each day with a hearty continental breakfast—no hidden costs, just pure exploration."
+  },
+  {
+    "id": 9,
+    "title": "Wildlife & Birdwatching Safari Through Chidiya Tapu",
+    "location": "Chidiya Tapu & Mount Harriet, Andaman",
+    "duration": "4 Days",
+    "people": "2-5 People",
+    "price": "₹24,999",
+    "originalPrice": "₹29,999",
+    "discountPercent": 17,
+    "rating": 4.6,
+    "amenities": [
+      "Expert Birdwatching Guide",
+      "Sunset Point Jeep Excursion",
+      "Guided Nature Trails",
+      "Packed Picnic Lunches"
+    ],
+    "availableDates": ["2025-10-08", "2025-11-03", "2025-12-01"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/chidyatapu_beach_andaman.jpg",
+    "link": "/packages/andaman-wildlife-safari",
+    "description": "Discover Andaman's secret bird sanctuaries and panoramic viewpoints on a four-day wildlife safari. Hike through dense forest trails with a seasoned guide, sip tea at Mount Harriet’s summit, and spot rare hornbills and kingfishers on Chidiya Tapu’s famed birdwatching platforms."
+  },
+  {
+    "id": 10,
+    "title": "Professional Photography Expedition: Capture Andaman's Magic",
+    "location": "Havelock & Neil Island, Andaman",
+    "duration": "5 Days",
+    "people": "1-3 People",
+    "price": "₹42,999",
+    "originalPrice": "₹49,999",
+    "discountPercent": 14,
+    "rating": 4.9,
+    "amenities": [
+      "Guidance by Pro Photographer",
+      "Golden Hour & Underwater Shoots",
+      "Daily Image Reviews & Tips",
+      "All-Day Breakfast"
+    ],
+    "availableDates": ["2025-10-12", "2025-11-18", "2025-12-10"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/professional-photography-in-andaman.png",
+    "link": "/packages/andaman-photography-expedition",
+    "description": "Frame Andaman's stunning seascapes and sunsets with expert coaching at every turn. From golden-hour cliff shoots on Havelock to underwater reef photography off Neil Island, you’ll return home with a portfolio of truly breathtaking images."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "img": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Radhanagar-Beach-Andaman.png",
+    "alt": "Travels Package",
+    "title": "Find Your Best",
+    "span": "Travels Package",
+    "description": "Planning for a trip? We will organize your trip with the best places and within best budget!"
+  },
+  {
+    "id": 2,
+    "img": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Port-Blair-Andaman-View.png",
+    "alt": "Port Blair Andaman",
+    "title": "Port Blair",
+    "span": "Andaman",
+    "description": "Discover Port Blair’s hidden gems on an itinerary built just for you."
+  },
+  {
+    "id": 3,
+    "img": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/exploring-andaman-and-nicobar-islands-a-perfect-escape.png",
+    "alt": "Perfect Escape to Andaman",
+    "title": "Perfect Escape",
+    "span": "for Your Honeymoon",
+    "description": "Turn your honeymoon into an island odyssey with bespoke romantic experiences."
+  },
+  {
+    "id": 4,
+    "img": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Andaman-Honeymoon-Trip.png",
+    "alt": "Andaman Honeymoon Trip",
+    "title": "Andaman Honeymoon",
+    "span": "Getaway for New Couples",
+    "description": "Embark on a once-in-a-lifetime Andaman adventure tailored for new couples."
+  },
+  {
+    "id": 5,
+    "img": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/Andaman-Tropical-Paradise.png",
+    "alt": "Tropical Paradise",
+    "title": "Tropical Paradise",
+    "span": "Awaits You",
+    "description": "Customize your dream getaway with hand-picked spots and budget-savvy plans."
+  }
+]

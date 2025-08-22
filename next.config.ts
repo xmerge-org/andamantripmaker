@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+  // reactStrictMode: true,
+  // swcMinify: true,
   images: {
-    domains: ['your-image-domain.com'],
+    domains: ['ik.imagekit.io', 'www.freeiconspng.com'],
   },
 };
 
