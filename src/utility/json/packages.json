@@ -208,5 +208,47 @@
     "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/professional-photography-in-andaman.png",
     "link": "/packages/andaman-photography-expedition",
     "description": "Frame Andaman's stunning seascapes and sunsets with expert coaching at every turn. From golden-hour cliff shoots on Havelock to underwater reef photography off Neil Island, you’ll return home with a portfolio of truly breathtaking images."
+  },
+  {
+    "id": 11,
+    "title": "Andaman Seafood & Culinary Journey: Taste the Tropics",
+    "location": "Port Blair & Havelock Island, Andaman",
+    "duration": "5 Days",
+    "people": "1-2 People",
+    "price": "₹27,999",
+    "originalPrice": "₹32,999",
+    "discountPercent": 15,
+    "rating": 4.7,
+    "amenities": [
+      "Local Market Tours",
+      "Seafood Cooking Class",
+      "Four-Course Tasting Menus",
+      "Airport & Ferry Transfers"
+    ],
+    "availableDates": ["2025-10-10", "2025-11-05", "2025-12-01"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/food-of-andaman-and-nicobar-islands.png",
+    "link": "/packages/andaman-culinary-journey",
+    "description": "Dive into Andaman's culinary heritage with fresh seafood market tours, hands-on cooking classes led by local chefs, and four-course dinners under swaying palms."
+  },
+  {
+    "id": 12,
+    "title": "Thrilling Water Sports Fiesta at Radhanagar Beach",
+    "location": "Havelock Island, Andaman",
+    "duration": "3 Days",
+    "people": "1-4 People",
+    "price": "₹22,999",
+    "originalPrice": "₹27,999",
+    "discountPercent": 18,
+    "rating": 4.8,
+    "amenities": [
+      "Jet Ski & Banana Boat Rides",
+      "Parasailing Over Turquoise Waters",
+      "Beach Volleyball",
+      "Snorkeling Gear Rental"
+    ],
+    "availableDates": ["2025-10-15", "2025-11-20", "2025-12-15"],
+    "image": "https://ik.imagekit.io/v24zntfh1/Andaman%20Trip%20Maker/thrilling-water-sports-fiesta-at-radhanaga-beach.png",
+    "link": "/packages/andaman-water-sports-fiesta",
+    "description": "Fuel your adrenaline with jet skis, banana-boat thrills, parasailing spectacles and guided snorkeling through vibrant coral reefs at Radhanagar Beach."
   }
 ]

@@ -5,6 +5,7 @@ import HeroSection from "../components/generic/HeroSection";
 import TravelPackages from "../components/generic/TravelPackages";
 import ContactUs from "@/components/generic/ContactUs";
 import GoogleReviews from "@/components/generic/GoogleReviews";
+import AboutUs from "@/components/generic/AboutUs";
 
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <TravelPackages />
+      <AboutUs />
       <GoogleReviews />
       <ContactUs />
       <Footer />

@@ -44,7 +44,7 @@ const Navbar = () => {
             <a href="#" className="hover:text-coral transition-colors">
               Home
             </a>
-            <a href="#" className="hover:text-coral transition-colors">
+            <a href="#aboutus" className="hover:text-coral transition-colors">
               About
             </a>
             <a href="#packages" className="hover:text-coral transition-colors">
