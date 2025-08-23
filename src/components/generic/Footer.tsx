@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -16,7 +15,7 @@ const Footer = () => {
         >
           <path
             d="M0,49 C150,150 350,0 600,49 C850,100 1050,0 1200,49 L1200,120 L0,120 Z"
-            fill="#3b82f6" // primary blue wave
+            fill="#3b82f6"
             fillOpacity="0.6"
           />
         </svg>
@@ -29,7 +28,7 @@ const Footer = () => {
         >
           <path
             d="M0,49 C150,150 350,0 600,49 C850,100 1050,0 1200,49 L1200,120 L0,120 Z"
-            fill="#2563eb" // darker blue wave
+            fill="#2563eb"
             fillOpacity="0.8"
           />
         </svg>
@@ -57,11 +56,15 @@ const Footer = () => {
       </motion.div>
 
       <div className="relative container mx-auto px-6 pt-20 pb-6 text-center z-10">
-        <h2 className="text-2xl font-medium mb-4">Explore the world with curated travel experiences <br/> and unforgettable adventures.</h2>
+        <h2 className="text-xl md:text-2xl font-medium mb-4 leading-snug">
+          Curated journeys. Unforgettable adventures.
+        </h2>
         <p className="text-sm text-gray-300 mb-4">
           Contact us | Privacy Policy | Terms & Conditions
         </p>
-        <p className="text-sm text-white">© {new Date().getFullYear()} Andaman Trip Maker</p>
+        <p className="text-sm text-white">
+          © {new Date().getFullYear()} Andaman Trip Maker
+        </p>
         <p className="opacity-75 text-xs">Made with 🤍 by Xmerge</p>
       </div>
     </footer>

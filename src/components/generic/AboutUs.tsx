@@ -40,7 +40,15 @@ const Counter = ({ from = 0, to, duration = 2 }: CounterProps) => {
 
 const AboutUs = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" id="aboutus">
+        <div className="container mx-auto px-6 mb-10 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-coral mb-2">
+          About Us
+        </h1>
+        <p className="text-gray-600 text-lg">
+          Your Trusted Partner for Andaman Adventures
+        </p>
+      </div>
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Image + Stats */}
         <div className="relative">
