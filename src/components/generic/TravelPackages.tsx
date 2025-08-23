@@ -86,7 +86,7 @@ const TravelPackages = () => {
                       {pkg.originalPrice}
                     </span>
                   </div>
-                  <Button className="bg-gradient-tropical hover:shadow-tropical text-white">
+                  <Button className="bg-orange-600 hover:shadow-md hover:bg-orange-700 text-white">
                     Book Now
                   </Button>
                 </div>

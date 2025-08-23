@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { SendHorizonal } from "lucide-react";
 
 const ContactUs = () => {
   return (
@@ -29,7 +30,7 @@ const ContactUs = () => {
                 </label>
                 <Input
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder="name@domain.com"
                   className="w-full"
                 />
               </div>
@@ -44,8 +45,8 @@ const ContactUs = () => {
                 />
               </div>
 
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                Send Message
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
+                <SendHorizonal/> Send Message
               </Button>
             </form>
           </div>
