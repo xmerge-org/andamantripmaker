@@ -1,20 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-
 const GoogleReviews = () => {
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      const el = document.querySelector("a[href*='elfsight.com']");
-      if (el && el.textContent.includes("Free Google Reviews widget")) {
-        (el as HTMLElement).style.display = "none";
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="my-12 elfsight-google-reviews-widget">
