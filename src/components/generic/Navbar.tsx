@@ -1,12 +1,16 @@
 "use client";
-import { Search, User, Menu, X } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { Search, User, Menu, X, ExternalLink } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "@/assets/logo/ATM-logo.png";
 import Image from "next/image";
+
+const DashboardLink = "https://www.aasvana.com/login";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +19,20 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        profileRef.current &&
+        !profileRef.current.contains(event.target as Node)
+      ) {
+        setProfileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -56,12 +74,43 @@ const Navbar = () => {
             <a href="#contact" className="hover:text-coral transition-colors">
               Contact
             </a>
+            <a
+              href={DashboardLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-coral transition-colors"
+            >
+              Dashboard
+            </a>
           </nav>
 
           {/* Icons + Mobile Menu Toggle */}
           <div className="flex items-center gap-4">
             <Search className="w-5 h-5 hover:text-coral transition-colors cursor-pointer" />
-            <User className="w-5 h-5 hover:text-coral transition-colors cursor-pointer" />
+            {/* Profile Dropdown */}
+            <div className="relative" ref={profileRef}>
+              <button
+                onClick={() => setProfileOpen(!profileOpen)}
+                className="p-1 hover:text-coral transition-colors cursor-pointer"
+                aria-label="Profile menu"
+              >
+                <User className="w-5 h-5" />
+              </button>
+              {profileOpen && (
+                <div className="absolute right-0 mt-2 w-48 z-[60] bg-white shadow-lg rounded-md py-1 text-gray-900">
+                  <a
+                    href={DashboardLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={() => setProfileOpen(false)}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Dashboard
+                  </a>
+                </div>
+              )}
+            </div>
             <button
               className="md:hidden"
               onClick={() => setOpen(!open)}
@@ -90,14 +139,22 @@ const Navbar = () => {
           <a href="#" className="hover:text-coral transition-colors">
             About
           </a>
-          <a href="#" className="hover:text-coral transition-colors">
+          <a href="#packages" className="hover:text-coral transition-colors">
             Packages
           </a>
           <a href="#" className="hover:text-coral transition-colors">
             Blog
           </a>
-          <a href="#" className="hover:text-coral transition-colors">
+          <a href="#contact" className="hover:text-coral transition-colors">
             Contact
+          </a>
+          <a
+            href={DashboardLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-coral transition-colors"
+          >
+            Dashboard
           </a>
         </div>
       )}

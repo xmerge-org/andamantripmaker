@@ -60,7 +60,26 @@ const Footer = () => {
           Curated journeys. Unforgettable adventures.
         </h2>
         <p className="text-sm text-gray-300 mb-4">
-          Contact us | Privacy Policy | Terms & Conditions
+          <a href="#" className="hover:text-coral transition-colors">
+            Contact us
+          </a>{" "}
+          |{" "}
+          <a href="#" className="hover:text-coral transition-colors">
+            Privacy Policy
+          </a>{" "}
+          |{" "}
+          <a href="#" className="hover:text-coral transition-colors">
+            Terms & Conditions
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://www.aasvana.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-coral transition-colors"
+          >
+            Dashboard
+          </a>
         </p>
         <p className="text-sm text-white">
           © {new Date().getFullYear()} Andaman Trip Maker
