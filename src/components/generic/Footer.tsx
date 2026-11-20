@@ -41,7 +41,7 @@ const COLUMNS: {
         }),
         external: true,
       },
-      { label: "Partner dashboard", href: SITE.dashboard, external: true },
+      { label: "Dashboard", href: SITE.dashboard, external: true },
     ],
   },
 ];
