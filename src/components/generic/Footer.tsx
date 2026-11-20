@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "@/assets/logo/ATM-logo.png";
 import { SITE } from "@/utility/site";
 import { whatsappLink } from "@/utility/enquiry";
+import Link from "next/dist/client/link";
 
 const COLUMNS: {
   title: string;
@@ -132,7 +133,9 @@ export default function Footer() {
           </p>
           <p className="font-mono text-[0.6875rem] uppercase tracking-[0.14em]">
             Made with love by{" "}
-            <span className="text-foam/75">justaquib</span>
+            <Link href="https://www.justaquib.com" passHref>
+              <span className="text-foam/75">justaquib</span>
+            </Link>
           </p>
         </div>
 
