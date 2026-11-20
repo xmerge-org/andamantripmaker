@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "profile": "qoder-glb-safe",
+  "status": "complete",
+  "capabilities": [
+    {
+      "id": "artifact.glb.create",
+      "status": "implemented",
+      "evidence": [
+        "revision:1"
+      ]
+    },
+    {
+      "id": "transaction.dry-run",
+      "status": "implemented",
+      "evidence": [
+        "lifecycle:createModelBundle"
+      ]
+    },
+    {
+      "id": "transaction.expected-state",
+      "status": "implemented",
+      "evidence": [
+        "state:sha256:ba3f4a88469a26514b6398cf6bb46460f4fc979b2b6c5a38cf2955ba9a434cb5"
+      ]
+    },
+    {
+      "id": "project.sidecar",
+      "status": "implemented",
+      "evidence": [
+        "revision:1"
+      ]
+    },
+    {
+      "id": "validation.khronos",
+      "status": "implemented",
+      "evidence": [
+        "profile:qoder-glb-safe"
+      ]
+    },
+    {
+      "id": "validation.spatial-envelope",
+      "status": "implemented",
+      "evidence": [
+        "preflight:world-bounds"
+      ]
+    },
+    {
+      "id": "geometry.primitive.cylinder",
+      "status": "implemented",
+      "evidence": [
+        "feature:island.reef.feature",
+        "feature:island.lagoon.feature"
+      ]
+    },
+    {
+      "id": "geometry.axis",
+      "status": "implemented",
+      "evidence": [
+        "feature:island.reef.feature:y",
+        "feature:island.lagoon.feature:y",
+        "feature:hut.roof.feature:z",
+        "feature:palm1.trunk.feature:z",
+        "feature:palm1.frond.000.feature:x",
+        "feature:palm2.trunk.feature:z",
+        "feature:palm2.frond.000.feature:x"
+      ]
+    },
+    {
+      "id": "node.hierarchy.create",
+      "status": "implemented",
+      "evidence": [
+        "occurrence:island.reef",
+        "occurrence:island.lagoon",
+        "occurrence:island.mound",
+        "occurrence:hut.group",
+        "occurrence:hut.walls",
+        "occurrence:hut.roof",
+        "occurrence:palm1.group",
+        "occurrence:palm1.trunk",
+        "occurrence:palm1.crown",
+        "occurrence:palm1.frond.000",
+        "occurrence:palm1.nut.000",
+        "occurrence:palm2.group",
+        "occurrence:palm2.trunk",
+        "occurrence:palm2.crown",
+        "occurrence:palm2.frond.000",
+        "occurrence:palm2.nut.000"
+      ]
+    },
+    {
+      "id": "geometry.primitive.ellipsoid",
+      "status": "implemented",
+      "evidence": [
+        "feature:island.mound.feature"
+      ]
+    },
+    {
+      "id": "geometry.primitive.box",
+      "status": "implemented",
+      "evidence": [
+        "feature:hut.walls.feature"
+      ]
+    },
+    {
+      "id": "geometry.profile.loft",
+      "status": "implemented",
+      "evidence": [
+        "feature:hut.roof.feature",
+        "feature:palm1.trunk.feature",
+        "feature:palm1.frond.000.feature",
+        "feature:palm2.trunk.feature",
+        "feature:palm2.frond.000.feature"
+      ]
+    },
+    {
+      "id": "pattern.radial",
+      "status": "implemented",
+      "evidence": [
+        "pattern:palm1.fronds",
+        "pattern:palm1.nuts",
+        "pattern:palm2.fronds",
+        "pattern:palm2.nuts"
+      ]
+    },
+    {
+      "id": "geometry.primitive.sphere",
+      "status": "implemented",
+      "evidence": [
+        "feature:palm1.nut.000.feature",
+        "feature:palm2.nut.000.feature"
+      ]
+    },
+    {
+      "id": "geometry.edit",
+      "status": "unsupported",
+      "evidence": [
+        "profile:qoder-glb-safe"
+      ]
+    },
+    {
+      "id": "animation.edit",
+      "status": "unsupported",
+      "evidence": [
+        "profile:qoder-glb-safe"
+      ]
+    },
+    {
+      "id": "texture.import",
+      "status": "unsupported",
+      "evidence": [
+        "profile:qoder-glb-safe"
+      ]
+    }
+  ]
+}

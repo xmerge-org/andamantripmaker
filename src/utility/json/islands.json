@@ -1,0 +1,72 @@
+[
+  {
+    "code": "POR",
+    "name": "Port Blair",
+    "renamed": "Sri Vijaya Puram since 2024",
+    "coords": "11.6234° N · 92.7265° E",
+    "lat": 11.6234,
+    "lng": 92.7265,
+    "distance": "Base",
+    "crossing": "Veer Savarkar Airport, you land here",
+    "days": "1–2 days",
+    "bestFor": "Cellular Jail · Aberdeen bazaar · Corbyn's Cove",
+    "note": "Every trip in the chain starts here. Build in a full day before you hop south — the jail's light-and-sound show is worth staying awake for.",
+    "image": "/img/hero-crossing.jpg"
+  },
+  {
+    "code": "ROS",
+    "name": "Ross Island",
+    "renamed": "Netaji Subhas Chandra Bose Dweep",
+    "coords": "11.6439° N · 92.7531° E",
+    "lat": 11.6439,
+    "lng": 92.7531,
+    "distance": "5 km from base",
+    "crossing": "15-minute ferry from Phoenix Bay",
+    "days": "Half day",
+    "bestFor": "Colonial ruins · Spotted deer · Sky walk",
+    "note": "A British plantation swallowed by strangler figs. Free of crowds before 9am, and the deer have stopped being shy.",
+    "image": "/img/pkg-08.jpg"
+  },
+  {
+    "code": "BAR",
+    "name": "Baratang",
+    "renamed": null,
+    "coords": "12.2236° N · 92.7547° E",
+    "lat": 12.2236,
+    "lng": 92.7547,
+    "distance": "85 km north",
+    "crossing": "3-hour drive on the Andaman Trunk Road",
+    "days": "Full day",
+    "bestFor": "Limestone caves · Mud volcano · Jolly Ropo creek",
+    "note": "The trunk road runs through a tribal reserve with timed convoy windows, so this one leaves early. The mangrove creek is the only navigable one in India.",
+    "image": "/img/pkg-03.jpg"
+  },
+  {
+    "code": "HAV",
+    "name": "Havelock",
+    "renamed": "Swaraj Dweep",
+    "coords": "11.9944° N · 92.9531° E",
+    "lat": 11.9944,
+    "lng": 92.9531,
+    "distance": "36 km east",
+    "crossing": "2-hour catamaran from Phoenix Bay",
+    "days": "2–3 days",
+    "bestFor": "Radhanagar Beach · Elephant Bay snorkelling · Bamboo get",
+    "note": "The reason most people book. Two nights minimum — one sunset at Radhanagar and one full morning at Elephant Beach before the tour boats arrive.",
+    "image": "/img/hero-aerial.jpg"
+  },
+  {
+    "code": "NEI",
+    "name": "Neil Island",
+    "renamed": "Shaheed Dweep",
+    "coords": "11.9036° N · 92.9917° E",
+    "lat": 11.9036,
+    "lng": 92.9917,
+    "distance": "46 km east",
+    "crossing": "15 minutes from Havelock, 2.5 hours from base",
+    "days": "1–2 days",
+    "bestFor": "Natural Bridge · Bharata and Laxmanpur · Krushna Beach",
+    "note": "Smaller, slower, no cars. Cycle the perimeter in an afternoon and take the last light at Krushna on the north shore.",
+    "image": "/img/pkg-07.jpg"
+  }
+]

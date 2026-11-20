@@ -1,17 +1,92 @@
 @import "tailwindcss";
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
 @import "tw-animate-css";
-
 
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------
+   Andaman Trip Maker — brand tokens.
+
+   The sunset ramp (crimson → coral → ember) is lifted from the ATM
+   logo emblem; the cool blues are the water column the page descends
+   through as you scroll. `coral`, `navy` and `sand` were referenced by
+   the original components but never defined, which is why the site
+   rendered with no brand colour at all.
+------------------------------------------------------------------ */
+@theme {
+  --color-ink: #04202a;
+  --color-deep: #073242;
+  --color-sea: #0c5468;
+  --color-lagoon: #1f9eae;
+  --color-reef: #57cfc6;
+  --color-sand: #f3ecdf;
+  --color-foam: #fbf8f2;
+  --color-coral: #e1532b;
+  --color-ember: #f2a03d;
+  --color-crimson: #c2184c;
+  --color-ink-soft: #55686f;
+
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-azeret), ui-monospace, monospace;
+
+  --shadow-lift: 0 18px 40px -22px rgb(4 32 42 / 0.35), 0 2px 8px -3px rgb(4 32 42 / 0.12);
+  --shadow-elegant: 0 34px 70px -30px rgb(4 32 42 / 0.45), 0 3px 12px -4px rgb(4 32 42 / 0.16);
+  --shadow-ember: 0 20px 46px -20px rgb(225 83 43 / 0.55);
+
+  --ease-liquid: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-swell: cubic-bezier(0.34, 1.32, 0.64, 1);
+
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-swell: swell 9s ease-in-out infinite;
+  --animate-wave: wave 26s linear infinite;
+  --animate-wave-slow: wave 40s linear infinite reverse;
+  --animate-marquee: marquee 48s linear infinite;
+  --animate-dash: dash 5s linear infinite;
+
+  @keyframes drift {
+    from {
+      transform: scale(1.04) translate3d(-1%, 0.5%, 0);
+    }
+    to {
+      transform: scale(1.14) translate3d(1.5%, -1%, 0);
+    }
+  }
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translateY(-6px);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
+  @keyframes wave {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -160;
+    }
+  }
+}
+
+/* shadcn/ui semantic layer, retuned to the brand */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,120 +123,184 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.5rem;
+  --background: #fbf8f2;
+  --foreground: #04202a;
+  --card: #ffffff;
+  --card-foreground: #04202a;
+  --popover: #ffffff;
+  --popover-foreground: #04202a;
+  --primary: #e1532b;
+  --primary-foreground: #fff7f3;
+  --secondary: #f3ecdf;
+  --secondary-foreground: #04202a;
+  --muted: #f0eadf;
+  --muted-foreground: #55686f;
+  --accent: #f3ecdf;
+  --accent-foreground: #04202a;
+  --destructive: #b3261e;
+  --border: #e3dbcb;
+  --input: #e3dbcb;
+  --ring: #1f9eae;
+  --chart-1: #e1532b;
+  --chart-2: #1f9eae;
+  --chart-3: #c2184c;
+  --chart-4: #f2a03d;
+  --chart-5: #0c5468;
+  --sidebar: #04202a;
+  --sidebar-foreground: #fbf8f2;
+  --sidebar-primary: #e1532b;
+  --sidebar-primary-foreground: #fff7f3;
+  --sidebar-accent: #073242;
+  --sidebar-accent-foreground: #fbf8f2;
+  --sidebar-border: rgb(251 248 242 / 12%);
+  --sidebar-ring: #1f9eae;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #04202a;
+  --foreground: #fbf8f2;
+  --card: #073242;
+  --card-foreground: #fbf8f2;
+  --popover: #073242;
+  --popover-foreground: #fbf8f2;
+  --primary: #f2a03d;
+  --primary-foreground: #04202a;
+  --secondary: #0c5468;
+  --secondary-foreground: #fbf8f2;
+  --muted: #0c5468;
+  --muted-foreground: #9db4bb;
+  --accent: #0c5468;
+  --accent-foreground: #fbf8f2;
+  --destructive: #ff6b61;
+  --border: rgb(251 248 242 / 14%);
+  --input: rgb(251 248 242 / 18%);
+  --ring: #57cfc6;
+  --chart-1: #f2a03d;
+  --chart-2: #57cfc6;
+  --chart-3: #e1532b;
+  --chart-4: #f7d08a;
+  --chart-5: #1f9eae;
+  --sidebar: #073242;
+  --sidebar-foreground: #fbf8f2;
+  --sidebar-primary: #f2a03d;
+  --sidebar-primary-foreground: #04202a;
+  --sidebar-accent: #0c5468;
+  --sidebar-accent-foreground: #fbf8f2;
+  --sidebar-border: rgb(251 248 242 / 14%);
+  --sidebar-ring: #57cfc6;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* The blanket outline-ring/50 above is what shadcn ships, and it is nearly
+     invisible on both the sand and ink sections. */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--color-reef);
+    outline-offset: 2px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground antialiased;
+    text-rendering: optimizeLegibility;
   }
-}
-button,
-a {
-  @apply cursor-pointer;
-}
-@keyframes bounce-slow {
-  0%,
-  100% {
-    transform: translateY(-10px);
+
+  button,
+  a {
+    @apply cursor-pointer;
   }
-  50% {
-    transform: translateY(10px);
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-coral);
+    color: #fff;
+  }
+
+  /* Fraunces' soft/wonk axes are what make the display face read as a
+     hand-lettered chart title rather than a stock serif. */
+  .font-display {
+    font-variation-settings:
+      "SOFT" 40,
+      "WONK" 1;
   }
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 4s infinite ease-in-out;
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-[84rem] px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.6875rem] uppercase tracking-[0.24em];
+  }
+
+  /* Hairline cartographic ground: two orthogonal sweeps at chart density. */
+  .chart-ground {
+    background-image:
+      linear-gradient(to right, rgb(4 32 42 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(4 32 42 / 0.05) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+  }
+
+  .chart-ground-dark {
+    background-image:
+      linear-gradient(to right, rgb(87 207 198 / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(87 207 198 / 0.07) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+  }
+
+  .scrim-hero {
+    background:
+      linear-gradient(97deg, rgb(4 32 42 / 0.95) 0%, rgb(4 32 42 / 0.82) 34%, rgb(4 32 42 / 0.34) 64%, rgb(4 32 42 / 0.56) 100%),
+      linear-gradient(to top, rgb(4 32 42 / 0.96) 0%, transparent 42%);
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+  }
+
+  .rule-sunset {
+    background: linear-gradient(to right, transparent, var(--color-crimson), var(--color-coral), var(--color-ember), transparent);
+  }
 }
 
-.swiper-pagination,
-.swiper-button-prev,
-.swiper-button-next {
-  display: none !important;
-}
-.animate-wave {
-  animation: wave 6s linear infinite;
-}
-.animate-wave-slow {
-  animation: wave 10s linear infinite reverse;
-}
-@keyframes wave {
-  0% {
-    transform: translateX(0);
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-a[href*="elfsight.com"][target="_blank"] {
-  display: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

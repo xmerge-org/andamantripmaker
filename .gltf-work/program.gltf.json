@@ -1,0 +1,1243 @@
+{
+  "schema": "modeling.program",
+  "schemaVersion": 1,
+  "kind": "model.create",
+  "intent": "build a low-poly Andaman island emblem for a hero section",
+  "units": {
+    "length": "m",
+    "angle": "rad",
+    "time": "s"
+  },
+  "coordinateSystem": {
+    "handedness": "right",
+    "upAxis": "y",
+    "forwardAxis": "z"
+  },
+  "spatialEnvelope": {
+    "min": [
+      -0.84,
+      -0.12,
+      -0.604
+    ],
+    "max": [
+      0.981,
+      1.133,
+      0.915
+    ],
+    "tolerance": 0.005
+  },
+  "requires": [
+    "modeling.feature.axis",
+    "modeling.feature.box",
+    "modeling.feature.cylinder",
+    "modeling.feature.ellipsoid",
+    "modeling.feature.loft",
+    "modeling.feature.sphere",
+    "modeling.pattern.radial",
+    "modeling.scene",
+    "modeling.spatial-envelope"
+  ],
+  "parameters": [],
+  "operations": [
+    {
+      "op": "appearance.define",
+      "opKey": "sea.reef",
+      "key": "sea.reef",
+      "baseColor": "#86CFC8",
+      "metallic": 0.05,
+      "roughness": 0.5,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "sea.deep",
+      "key": "sea.deep",
+      "baseColor": "#0B5C76",
+      "metallic": 0.2,
+      "roughness": 0.22,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "island.sand",
+      "key": "island.sand",
+      "baseColor": "#E3C48F",
+      "metallic": 0,
+      "roughness": 0.93,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "hut.wall",
+      "key": "hut.wall",
+      "baseColor": "#F3E6CC",
+      "metallic": 0,
+      "roughness": 0.82,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "hut.thatch",
+      "key": "hut.thatch",
+      "baseColor": "#74442B",
+      "metallic": 0,
+      "roughness": 0.9,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "palm.trunk",
+      "key": "palm.trunk",
+      "baseColor": "#7C5433",
+      "metallic": 0,
+      "roughness": 0.9,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "palm.frond",
+      "key": "palm.frond",
+      "baseColor": "#1E7A5F",
+      "metallic": 0,
+      "roughness": 0.72,
+      "emissive": "#000000"
+    },
+    {
+      "op": "appearance.define",
+      "opKey": "palm.nut",
+      "key": "palm.nut",
+      "baseColor": "#4A2E1C",
+      "metallic": 0,
+      "roughness": 0.6,
+      "emissive": "#000000"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "island.root",
+      "key": "island.root",
+      "name": "AndamanIsland",
+      "transform": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "island.reef.feature",
+      "key": "island.reef.feature",
+      "feature": {
+        "type": "primitive.cylinder",
+        "radius": 0.6,
+        "height": 0.02,
+        "radialSegments": 48,
+        "axis": "y"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "island.reef.component",
+      "key": "island.reef.component",
+      "feature": "island.reef.feature",
+      "appearance": "sea.reef"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "island.reef",
+      "key": "island.reef",
+      "name": "ReefFlat",
+      "parent": "island.root",
+      "component": "island.reef.component",
+      "transform": {
+        "translation": [
+          0,
+          -0.06,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "island.lagoon.feature",
+      "key": "island.lagoon.feature",
+      "feature": {
+        "type": "primitive.cylinder",
+        "radius": 0.55,
+        "height": 0.024,
+        "radialSegments": 48,
+        "axis": "y"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "island.lagoon.component",
+      "key": "island.lagoon.component",
+      "feature": "island.lagoon.feature",
+      "appearance": "sea.deep"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "island.lagoon",
+      "key": "island.lagoon",
+      "name": "LagoonDisc",
+      "parent": "island.root",
+      "component": "island.lagoon.component",
+      "transform": {
+        "translation": [
+          0,
+          -0.035,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "island.mound.feature",
+      "key": "island.mound.feature",
+      "feature": {
+        "type": "primitive.ellipsoid",
+        "radii": [
+          0.56,
+          0.28,
+          0.54
+        ],
+        "widthSegments": 32,
+        "heightSegments": 12
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "island.mound.component",
+      "key": "island.mound.component",
+      "feature": "island.mound.feature",
+      "appearance": "island.sand"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "island.mound",
+      "key": "island.mound",
+      "name": "SandCay",
+      "parent": "island.root",
+      "component": "island.mound.component",
+      "transform": {
+        "translation": [
+          0,
+          0.16,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "hut.group",
+      "key": "hut.group",
+      "name": "Hut",
+      "parent": "island.root",
+      "transform": {
+        "translation": [
+          -0.02,
+          0.4,
+          -0.26
+        ],
+        "rotationRad": [
+          0,
+          0.42,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "hut.walls.feature",
+      "key": "hut.walls.feature",
+      "feature": {
+        "type": "primitive.box",
+        "size": [
+          0.3,
+          0.24,
+          0.26
+        ]
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "hut.walls.component",
+      "key": "hut.walls.component",
+      "feature": "hut.walls.feature",
+      "appearance": "hut.wall"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "hut.walls",
+      "key": "hut.walls",
+      "name": "HutWalls",
+      "parent": "hut.group",
+      "component": "hut.walls.component",
+      "transform": {
+        "translation": [
+          0,
+          0.12,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "hut.roof.feature",
+      "key": "hut.roof.feature",
+      "feature": {
+        "type": "profile.loft",
+        "sections": [
+          {
+            "offset": 0,
+            "profile": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ],
+              [
+                -0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "offset": 0.26,
+            "profile": [
+              [
+                -0.05,
+                -0.05
+              ],
+              [
+                0.05,
+                -0.05
+              ],
+              [
+                0.05,
+                0.05
+              ],
+              [
+                -0.05,
+                0.05
+              ]
+            ]
+          }
+        ],
+        "axis": "z"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "hut.roof.component",
+      "key": "hut.roof.component",
+      "feature": "hut.roof.feature",
+      "appearance": "hut.thatch"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "hut.roof",
+      "key": "hut.roof",
+      "name": "HutRoof",
+      "parent": "hut.group",
+      "component": "hut.roof.component",
+      "transform": {
+        "translation": [
+          0,
+          0.225,
+          0
+        ],
+        "rotationRad": [
+          -1.5707963267948966,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm1.group",
+      "key": "palm1.group",
+      "name": "PalmTall",
+      "parent": "island.root",
+      "transform": {
+        "translation": [
+          0.2,
+          0.41,
+          0.14
+        ],
+        "rotationRad": [
+          0,
+          -0.6,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm1.trunk.feature",
+      "key": "palm1.trunk.feature",
+      "feature": {
+        "type": "profile.loft",
+        "sections": [
+          {
+            "offset": 0,
+            "profile": [
+              [
+                0.075,
+                0
+              ],
+              [
+                0.053033008588991064,
+                0.05303300858899106
+              ],
+              [
+                4.592425496802574e-18,
+                0.075
+              ],
+              [
+                -0.05303300858899106,
+                0.053033008588991064
+              ],
+              [
+                -0.075,
+                9.184850993605149e-18
+              ],
+              [
+                -0.05303300858899108,
+                -0.05303300858899106
+              ],
+              [
+                -1.3777276490407722e-17,
+                -0.075
+              ],
+              [
+                0.05303300858899105,
+                -0.05303300858899108
+              ]
+            ]
+          },
+          {
+            "offset": 0.36,
+            "profile": [
+              [
+                0.1487522969763519,
+                0
+              ],
+              [
+                0.13059291740991785,
+                0.043840620433565944
+              ],
+              [
+                0.08675229697635191,
+                0.062
+              ],
+              [
+                0.042911676542785965,
+                0.04384062043356595
+              ],
+              [
+                0.02475229697635191,
+                7.59281015471359e-18
+              ],
+              [
+                0.04291167654278595,
+                -0.043840620433565944
+              ],
+              [
+                0.0867522969763519,
+                -0.062
+              ],
+              [
+                0.13059291740991785,
+                -0.04384062043356596
+              ]
+            ]
+          },
+          {
+            "offset": 0.68,
+            "profile": [
+              [
+                0.288,
+                0
+              ],
+              [
+                0.27394112549695426,
+                0.03394112549695428
+              ],
+              [
+                0.24,
+                0.048
+              ],
+              [
+                0.20605887450304572,
+                0.033941125496954286
+              ],
+              [
+                0.192,
+                5.8783046359072955e-18
+              ],
+              [
+                0.2060588745030457,
+                -0.03394112549695428
+              ],
+              [
+                0.24,
+                -0.048
+              ],
+              [
+                0.27394112549695426,
+                -0.03394112549695429
+              ]
+            ]
+          }
+        ],
+        "axis": "z"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm1.trunk.component",
+      "key": "palm1.trunk.component",
+      "feature": "palm1.trunk.feature",
+      "appearance": "palm.trunk"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm1.trunk",
+      "key": "palm1.trunk",
+      "name": "PalmTallTrunk",
+      "parent": "palm1.group",
+      "component": "palm1.trunk.component",
+      "transform": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationRad": [
+          -1.5707963267948966,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm1.crown",
+      "key": "palm1.crown",
+      "name": "PalmTallCrown",
+      "parent": "palm1.group",
+      "transform": {
+        "translation": [
+          0.24,
+          0.68,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm1.frond.000.feature",
+      "key": "palm1.frond.000.feature",
+      "feature": {
+        "type": "profile.loft",
+        "sections": [
+          {
+            "offset": 0,
+            "profile": [
+              [
+                0.022,
+                0.023
+              ],
+              [
+                -0.022,
+                0.023
+              ],
+              [
+                -0.022,
+                0.005000000000000001
+              ],
+              [
+                0.022,
+                0.005000000000000001
+              ]
+            ]
+          },
+          {
+            "offset": 0.2,
+            "profile": [
+              [
+                0.058,
+                0.004999999999999999
+              ],
+              [
+                -0.058,
+                0.004999999999999999
+              ],
+              [
+                -0.058,
+                -0.013
+              ],
+              [
+                0.058,
+                -0.013
+              ]
+            ]
+          },
+          {
+            "offset": 0.42,
+            "profile": [
+              [
+                0.05,
+                -0.049
+              ],
+              [
+                -0.05,
+                -0.049
+              ],
+              [
+                -0.05,
+                -0.067
+              ],
+              [
+                0.05,
+                -0.067
+              ]
+            ]
+          },
+          {
+            "offset": 0.62,
+            "profile": [
+              [
+                0.012,
+                -0.143
+              ],
+              [
+                -0.012,
+                -0.143
+              ],
+              [
+                -0.012,
+                -0.161
+              ],
+              [
+                0.012,
+                -0.161
+              ]
+            ]
+          }
+        ],
+        "axis": "x"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm1.frond.000.component",
+      "key": "palm1.frond.000.component",
+      "feature": "palm1.frond.000.feature",
+      "appearance": "palm.frond"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm1.frond.000",
+      "key": "palm1.frond.000",
+      "name": "PalmTallFrond",
+      "parent": "palm1.crown",
+      "component": "palm1.frond.000.component",
+      "transform": {
+        "translation": [
+          0.02,
+          0.02,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "pattern.define",
+      "opKey": "palm1.fronds",
+      "key": "palm1.fronds",
+      "source": "palm1.frond.000",
+      "pattern": {
+        "type": "radial",
+        "count": 6,
+        "axis": "y",
+        "center": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm1.nut.000.feature",
+      "key": "palm1.nut.000.feature",
+      "feature": {
+        "type": "primitive.sphere",
+        "radius": 0.042,
+        "widthSegments": 12,
+        "heightSegments": 8
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm1.nut.000.component",
+      "key": "palm1.nut.000.component",
+      "feature": "palm1.nut.000.feature",
+      "appearance": "palm.nut"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm1.nut.000",
+      "key": "palm1.nut.000",
+      "name": "PalmTallCoconut",
+      "parent": "palm1.crown",
+      "component": "palm1.nut.000.component",
+      "transform": {
+        "translation": [
+          0.07,
+          -0.05,
+          0.04
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "pattern.define",
+      "opKey": "palm1.nuts",
+      "key": "palm1.nuts",
+      "source": "palm1.nut.000",
+      "pattern": {
+        "type": "radial",
+        "count": 3,
+        "axis": "y",
+        "center": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm2.group",
+      "key": "palm2.group",
+      "name": "PalmShort",
+      "parent": "island.root",
+      "transform": {
+        "translation": [
+          -0.24,
+          0.39,
+          0.18
+        ],
+        "rotationRad": [
+          0,
+          2.2,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm2.trunk.feature",
+      "key": "palm2.trunk.feature",
+      "feature": {
+        "type": "profile.loft",
+        "sections": [
+          {
+            "offset": 0,
+            "profile": [
+              [
+                0.06,
+                0
+              ],
+              [
+                0.042426406871192854,
+                0.04242640687119285
+              ],
+              [
+                3.673940397442059e-18,
+                0.06
+              ],
+              [
+                -0.04242640687119285,
+                0.042426406871192854
+              ],
+              [
+                -0.06,
+                7.347880794884118e-18
+              ],
+              [
+                -0.04242640687119286,
+                -0.04242640687119285
+              ],
+              [
+                -1.1021821192326178e-17,
+                -0.06
+              ],
+              [
+                0.04242640687119284,
+                -0.04242640687119286
+              ]
+            ]
+          },
+          {
+            "offset": 0.28,
+            "profile": [
+              [
+                0.11685286216997019,
+                0
+              ],
+              [
+                0.10220820122929758,
+                0.035355339059327376
+              ],
+              [
+                0.06685286216997019,
+                0.05
+              ],
+              [
+                0.031497523110642814,
+                0.03535533905932738
+              ],
+              [
+                0.016852862169970187,
+                6.123233995736766e-18
+              ],
+              [
+                0.03149752311064281,
+                -0.035355339059327376
+              ],
+              [
+                0.06685286216997018,
+                -0.05
+              ],
+              [
+                0.10220820122929755,
+                -0.03535533905932738
+              ]
+            ]
+          },
+          {
+            "offset": 0.52,
+            "profile": [
+              [
+                0.22,
+                0
+              ],
+              [
+                0.2082842712474619,
+                0.028284271247461898
+              ],
+              [
+                0.18,
+                0.04
+              ],
+              [
+                0.15171572875253808,
+                0.028284271247461905
+              ],
+              [
+                0.13999999999999999,
+                4.898587196589413e-18
+              ],
+              [
+                0.15171572875253808,
+                -0.028284271247461898
+              ],
+              [
+                0.18,
+                -0.04
+              ],
+              [
+                0.20828427124746188,
+                -0.02828427124746191
+              ]
+            ]
+          }
+        ],
+        "axis": "z"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm2.trunk.component",
+      "key": "palm2.trunk.component",
+      "feature": "palm2.trunk.feature",
+      "appearance": "palm.trunk"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm2.trunk",
+      "key": "palm2.trunk",
+      "name": "PalmShortTrunk",
+      "parent": "palm2.group",
+      "component": "palm2.trunk.component",
+      "transform": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationRad": [
+          -1.5707963267948966,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm2.crown",
+      "key": "palm2.crown",
+      "name": "PalmShortCrown",
+      "parent": "palm2.group",
+      "transform": {
+        "translation": [
+          0.18,
+          0.52,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm2.frond.000.feature",
+      "key": "palm2.frond.000.feature",
+      "feature": {
+        "type": "profile.loft",
+        "sections": [
+          {
+            "offset": 0,
+            "profile": [
+              [
+                0.022,
+                0.023
+              ],
+              [
+                -0.022,
+                0.023
+              ],
+              [
+                -0.022,
+                0.005000000000000001
+              ],
+              [
+                0.022,
+                0.005000000000000001
+              ]
+            ]
+          },
+          {
+            "offset": 0.2,
+            "profile": [
+              [
+                0.058,
+                0.004999999999999999
+              ],
+              [
+                -0.058,
+                0.004999999999999999
+              ],
+              [
+                -0.058,
+                -0.013
+              ],
+              [
+                0.058,
+                -0.013
+              ]
+            ]
+          },
+          {
+            "offset": 0.42,
+            "profile": [
+              [
+                0.05,
+                -0.049
+              ],
+              [
+                -0.05,
+                -0.049
+              ],
+              [
+                -0.05,
+                -0.067
+              ],
+              [
+                0.05,
+                -0.067
+              ]
+            ]
+          },
+          {
+            "offset": 0.62,
+            "profile": [
+              [
+                0.012,
+                -0.143
+              ],
+              [
+                -0.012,
+                -0.143
+              ],
+              [
+                -0.012,
+                -0.161
+              ],
+              [
+                0.012,
+                -0.161
+              ]
+            ]
+          }
+        ],
+        "axis": "x"
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm2.frond.000.component",
+      "key": "palm2.frond.000.component",
+      "feature": "palm2.frond.000.feature",
+      "appearance": "palm.frond"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm2.frond.000",
+      "key": "palm2.frond.000",
+      "name": "PalmShortFrond",
+      "parent": "palm2.crown",
+      "component": "palm2.frond.000.component",
+      "transform": {
+        "translation": [
+          0.02,
+          0.02,
+          0
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.8,
+          0.8,
+          0.8
+        ]
+      }
+    },
+    {
+      "op": "pattern.define",
+      "opKey": "palm2.fronds",
+      "key": "palm2.fronds",
+      "source": "palm2.frond.000",
+      "pattern": {
+        "type": "radial",
+        "count": 5,
+        "axis": "y",
+        "center": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "op": "feature.define",
+      "opKey": "palm2.nut.000.feature",
+      "key": "palm2.nut.000.feature",
+      "feature": {
+        "type": "primitive.sphere",
+        "radius": 0.034,
+        "widthSegments": 10,
+        "heightSegments": 6
+      }
+    },
+    {
+      "op": "component.define",
+      "opKey": "palm2.nut.000.component",
+      "key": "palm2.nut.000.component",
+      "feature": "palm2.nut.000.feature",
+      "appearance": "palm.nut"
+    },
+    {
+      "op": "occurrence.define",
+      "opKey": "palm2.nut.000",
+      "key": "palm2.nut.000",
+      "name": "PalmShortCoconut",
+      "parent": "palm2.crown",
+      "component": "palm2.nut.000.component",
+      "transform": {
+        "translation": [
+          0.055,
+          -0.04,
+          0.03
+        ],
+        "rotationRad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "op": "pattern.define",
+      "opKey": "palm2.nuts",
+      "key": "palm2.nuts",
+      "source": "palm2.nut.000",
+      "pattern": {
+        "type": "radial",
+        "count": 3,
+        "axis": "y",
+        "center": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "budget": {
+    "maxBytes": 3145728,
+    "maxNodes": 64,
+    "maxVertices": 9000,
+    "maxTriangles": 6000,
+    "maxOperations": 64,
+    "maxGeneratedInstances": 40
+  }
+}

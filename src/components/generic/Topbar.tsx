@@ -1,58 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Phone, MapPin, Mail, Facebook, Instagram, Twitter, Clock4 } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { SITE } from "@/utility/site";
+import { cn } from "@/lib/utils";
 
-const Topbar = () => {
-  const [showTopbar, setShowTopbar] = useState(true);
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setShowTopbar(false);
-      } else {
-        setShowTopbar(true);
-      }
-      lastScrollY = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const Topbar = ({ collapsed }: { collapsed: boolean }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 h-[40px] hidden md:block
-                  bg-gray-900 text-white transition-transform duration-300
-                  ${showTopbar ? "translate-y-0" : "-translate-y-full"}`}
+      className={cn(
+        "hidden overflow-hidden bg-ink text-foam/70 transition-[max-height,opacity] duration-500 ease-liquid md:block",
+        collapsed ? "max-h-0 opacity-0" : "max-h-12 opacity-100",
+      )}
     >
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex flex-wrap items-center justify-between text-sm">
-          {/* Left Info */}
-          <div className="flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Clock4 className="w-4 h-4 text-coral" />
-              <span>Mon-Sat: 10am to 8pm</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-coral" />
-              <span>+918583010020</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-coral" />
-              <span>info@andamantripmaker.in</span>
-            </div>
-          </div>
-
-          {/* Right Social */}
-          <div className="flex items-center gap-3">
-            <Facebook className="w-4 h-4 hover:text-coral cursor-pointer" />
-            <Instagram className="w-4 h-4 hover:text-coral cursor-pointer" />
-            <Twitter className="w-4 h-4 hover:text-coral cursor-pointer" />
-          </div>
+      <div className="shell flex h-10 items-center justify-between gap-6 font-mono text-[0.6875rem] tracking-wide">
+        <div className="flex items-center gap-6">
+          <span className="flex items-center gap-2">
+            <Clock className="size-3.5 text-ember" />
+            {SITE.hours}
+          </span>
+          <a
+            href={SITE.phone.href}
+            className="flex items-center gap-2 transition-colors hover:text-ember"
+          >
+            <Phone className="size-3.5 text-ember" />
+            {SITE.phone.display}
+          </a>
+          <a
+            href={SITE.email.href}
+            className="flex items-center gap-2 transition-colors hover:text-ember"
+          >
+            <Mail className="size-3.5 text-ember" />
+            {SITE.email.display}
+          </a>
         </div>
+
+        <span className="flex items-center gap-2 text-foam/50">
+          <MapPin className="size-3.5 text-reef" />
+          {SITE.base}
+        </span>
       </div>
     </div>
   );
