@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { Fraunces, Hanken_Grotesk, Azeret_Mono } from "next/font/google";
 import { SITE } from "@/utility/site";

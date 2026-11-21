@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Star, MessageCircle } from "lucide-react";
 import { SectionHead } from "./SectionHead";
@@ -23,6 +24,7 @@ export interface Package {
   tags: string[];
   amenities: string[];
   image: string;
+  link: string;
   description: string;
 }
 
@@ -175,6 +177,17 @@ export default function TravelPackages({
                     )}
                   </ul>
 
+                  {/* View details link */}
+                  <Link
+                    href={pkg.link}
+                    className="mb-2 inline-flex items-center gap-2 text-sm font-medium text-coral hover:text-amber-500 transition-colors"
+                  >
+                    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M7 7h10v10H7z" />
+                    </svg>
+                    View Details
+                  </Link>
+
                   {/* Wraps rather than squashes: a 3-column card is narrower
                       than the price plus both actions, so the pair drops to
                       its own line instead of overflowing the card. */}
@@ -198,10 +211,13 @@ export default function TravelPackages({
                         <MessageCircle className="size-4" />
                         WhatsApp
                       </a>
+                      <Link href={pkg.link} className="flex-1 whitespace-nowrap rounded-full border border-sea/30 px-3.5 py-2.5 text-sm font-semibold text-sea transition-colors duration-300 hover:border-sea hover:bg-sea/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:flex-none">
+                        View Details
+                      </Link>
                       <button
                         type="button"
                         onClick={() => onEnquire(pkg)}
-                        className="flex-1 whitespace-nowrap rounded-full bg-sea px-4 py-2.5 text-sm font-semibold text-foam transition-colors duration-300 hover:bg-coral focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:flex-none"
+                        className="inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-ink/10 px-3.5 py-2.5 text-sm font-semibold text-ink transition-colors duration-300 hover:border-coral hover:text-coral focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:flex-none"
                       >
                         Enquire
                       </button>

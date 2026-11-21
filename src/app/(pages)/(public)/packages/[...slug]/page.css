@@ -1,0 +1,51 @@
+/* Package Details Page Styles */
+
+.package-page {
+  isolation: isolate;
+}
+
+.package-hero {
+  background:
+    radial-gradient(ellipse at 82% 12%, rgb(31 158 174 / 0.22), transparent 36%),
+    linear-gradient(180deg, #02151d 0%, #04202a 52%, #073242 100%);
+}
+
+.package-hero::before,
+.package-hero::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgb(87 207 198 / 0.12);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.package-hero::before {
+  top: 3rem;
+  right: -16rem;
+  width: 44rem;
+  height: 44rem;
+}
+
+.package-hero::after {
+  top: 7rem;
+  right: -12rem;
+  width: 36rem;
+  height: 36rem;
+  box-shadow:
+    0 0 0 3rem rgb(87 207 198 / 0.025),
+    0 0 0 6rem rgb(87 207 198 / 0.02);
+}
+
+.package-cover {
+  box-shadow: 0 32px 90px -38px rgb(0 0 0 / 0.65);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .package-page *,
+  .package-page *::before,
+  .package-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

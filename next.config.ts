@@ -4,7 +4,16 @@ const nextConfig: NextConfig = {
   // reactStrictMode: true,
   // swcMinify: true,
   images: {
-    domains: ['ik.imagekit.io', 'www.freeiconspng.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+      },
+      {
+        protocol: "https",
+        hostname: "www.freeiconspng.com",
+      },
+    ],
   },
 };
 
